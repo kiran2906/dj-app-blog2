@@ -1,0 +1,65 @@
+{% extends "base.html"%}
+{% block content %}
+{% for post in post_list %}
+<div class="post-entry">
+    <h2><a href="{% url 'post_detail' post.pk%}">{{post.title}}</a></h2>
+    <p>{{post.body}}</p>
+</div>
+
+{% endfor %}
+<style>
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .container>* {
+        flex-basis: 10px;
+    }
+</style>
+
+
+<div class="container">
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam alias voluptatibus, non voluptate
+        expedita
+        facilis quae deleniti voluptatem eligendi a pariatur cumque blanditiis delectus odio asperiores nulla
+        excepturi
+        iste iure.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam recusandae tenetur porro alias iusto aliquam!
+        Repellat enim, veritatis doloribus, assumenda illo, molestiae adipisci magni tempora esse ipsa ducimus
+        perferendis consequatur?
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam recusandae tenetur porro alias iusto aliquam!
+        Repellat enim, veritatis doloribus, assumenda illo, molestiae adipisci magni tempora esse ipsa ducimus
+        perferendis consequatur?
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam alias voluptatibus, non voluptate
+        expedita
+        facilis quae deleniti voluptatem eligendi a pariatur cumque blanditiis delectus odio asperiores nulla
+        excepturi
+        iste iure.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam recusandae tenetur porro alias iusto aliquam!
+        Repellat enim, veritatis doloribus, assumenda illo, molestiae adipisci magni tempora esse ipsa ducimus
+        perferendis consequatur?
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam recusandae tenetur porro alias iusto aliquam!
+        Repellat enim, veritatis doloribus, assumenda illo, molestiae adipisci magni tempora esse ipsa ducimus
+        perferendis consequatur?
+    </p>
+
+
+</div>
+
+{% endblock content%}
